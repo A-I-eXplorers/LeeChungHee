@@ -49,9 +49,17 @@ df = df.dropna(subset=['embark_town'])
 
 <br/>
 
-Iris -
+Iris
 
-Wine -
+stratify로 클래스 비율 유지하고 scaler를 train에만 fit한 점이 좋았음 (데이터 누수 방지)
+
+주석: lr.predict(X_test)에 스케일링 안 된 X_test가 들어가 있어서 X_test_s로 바꿔야 할 것 같음
+
+Wine
+
+L1 규제 C 변화에 따른 가중치 변화로 영향력 큰 변수를 확인하는 접근이 좋았음
+
+주석: label이 df.columns[column+1]이라 변수명이 한 칸씩 밀려 있음 (마지막 변수가 class로 표시됨). df.columns[column]으로 수정 필요해 보임
 
 
 
