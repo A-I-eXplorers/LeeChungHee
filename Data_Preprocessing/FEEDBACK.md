@@ -25,9 +25,27 @@ Wine
 ## 이도연
 Titanic
 
-Iris
+embarked, embarked_town이 nan인 행을 최빈값으로 대체하는 대신 제거함으로써 왜곡이 비교적 적도록 하였으며 
 
-Wine
+학습셋 테스트셋 분리 및 표준화(StandardScaler)하여 로지스틱 회귀까지 실행 및 결과 확인 : 실제 학습과정을 위한 데이터 처리 과정이므로, 데이터 처리의 목표가 확실함
+
+주석:
+
+```python
+#df.dropna(subset=['embarked'])
+#df.dropna(subset=['embark_town'])
+
+df = df.dropna(subset=['embarked'])
+df = df.dropna(subset=['embark_town'])
+```
+
+위와 같이 수정이 필요해 보임 (이전 코드는 dropna가 df에 실제로 적용 안될 것으로 예상)
+
+<br/>
+
+Iris -
+
+Wine -
 
 
 
